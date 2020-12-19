@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class CardFactory : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    private int y;
+
     void Start()
     {
-        
+        y = 10;
     }
 
     // Update is called once per frame
