@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CardFactory : MonoBehaviour{
     
+    private int y;
+
     void Start() {
-        // Test comment
+        y = 2;
     }
     
     void Update() {
