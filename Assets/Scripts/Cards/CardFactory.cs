@@ -5,18 +5,10 @@ using UnityEngine;
 public class CardFactory : MonoBehaviour
 {
     
-    private int y;
-    private int x;
-
-    void Start()
-    {
-        y = 10;
-        x = 0;
+    void Start() {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("Wypisujemy X: " + x);
+    void Update() {
     }
 }
