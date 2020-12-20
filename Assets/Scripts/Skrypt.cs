@@ -17,5 +17,6 @@ public class Skrypt : MonoBehaviour
     {
         Debug.Log(x);
         // test
+        //Bodziix was here (╯°□°)╯︵ ┻━┻
     }
 }
