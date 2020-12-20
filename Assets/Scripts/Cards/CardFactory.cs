@@ -9,9 +9,8 @@ public class CardFactory : MonoBehaviour{
     }
     
     void Update() {
-        for (int i = 0; i < 10; i++)
-        {
-            Debug.Log(    i);
+        for (int i = 0; i < 10; i++){
+            Debug.Log(i);
         }
     }
 }
