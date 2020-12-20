@@ -17,5 +17,6 @@ public class CardFactory : MonoBehaviour{
             Debug.Log(i);
         }
         Debug.Log(x);
+        Debug.Log(y);
     }
 }
