@@ -16,5 +16,6 @@ public class Skrypt : MonoBehaviour
     void Update()
     {
         Debug.Log(x);
+        // test
     }
 }
