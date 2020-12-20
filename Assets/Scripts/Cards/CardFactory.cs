@@ -16,5 +16,6 @@ public class CardFactory : MonoBehaviour{
         for (int i = 0; i < 10; i++){
             Debug.Log(i);
         }
+        Debug.Log(y);
     }
 }
