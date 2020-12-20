@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    private int y;
+
     void Start()
     {
-        
+        y = 2;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
