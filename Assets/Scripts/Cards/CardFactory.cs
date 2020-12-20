@@ -6,10 +6,9 @@ public class CardFactory : MonoBehaviour
 {
     
     void Start() {
-
+        // Test comment
     }
-
-    // Update is called once per frame
+    
     void Update() {
         
     }
