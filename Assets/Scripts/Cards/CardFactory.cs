@@ -5,9 +5,11 @@ using UnityEngine;
 public class CardFactory : MonoBehaviour{
     
     private int x; 
+    private int y;
 
     void Start() {
-        x = 1;
+	x = 1;
+        y = 2;
     }
     
     void Update() {
