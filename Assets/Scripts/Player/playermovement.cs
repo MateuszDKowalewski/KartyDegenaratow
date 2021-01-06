@@ -26,3 +26,5 @@ public class playermovement : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
+//BodziixWasHere    >o)
+//                  (_)>
