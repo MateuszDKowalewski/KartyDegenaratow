@@ -6,7 +6,7 @@ public class ChcekerSpawn : MonoBehaviour
 {
     public GameObject checkerPrefab;
 
-    public void respawn(Transform spawnPoint) {
+    public void spawn(Transform spawnPoint) {
         Instantiate(checkerPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }
