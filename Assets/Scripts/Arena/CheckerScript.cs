@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckerDestroyer : MonoBehaviour
+public class CheckerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
