@@ -6,6 +6,9 @@ public class MouseController : MonoBehaviour
 {
     
     public GameObject map;
+
+    public ChcekerSpawn checkerSpawner;
+
     public List<Transform> tiles;
 
     void Start()
@@ -16,17 +19,22 @@ public class MouseController : MonoBehaviour
         {
             tiles.Add(map.transform.GetChild(i));
         }
-        
     }
 
     
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
-        if (hit)
+        if(Input.GetMouseButtonUp(0))
         {
-            Debug.Log(hit.collider.gameObject.name);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+            if (hit)
+            {
+                if(hit.collider.gameObject.transform.parent == map.transform)
+                {
+                    checkerSpawner.spawn(hit.collider.gameObject.transform);
+                }
+            }
         }
     }
 }
