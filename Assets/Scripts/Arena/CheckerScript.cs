@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class CheckerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    private TileScript tileUnder = null;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void setTileUnder(TileScript tileUnder) {
+        this.tileUnder = tileUnder;
+        tileUnder.setTaken(true);
     }
 }

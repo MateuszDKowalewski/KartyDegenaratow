@@ -38,7 +38,7 @@ public class MouseController : MonoBehaviour
             {
                 if(hit.collider.gameObject.transform.parent == map.transform)
                 {
-                    checkerSpawner.spawn(hit.collider.gameObject.transform);
+                    checkerSpawner.spawn(hit.collider.gameObject.transform, hit.collider.gameObject.GetComponent<TileScript>());
                 }
             }
         }

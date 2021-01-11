@@ -6,7 +6,7 @@ public class TileScript : MonoBehaviour
 {
 
     public bool firstRow;
-    private bool taken;
+    public bool taken = false;
 
     void Start()
     {
