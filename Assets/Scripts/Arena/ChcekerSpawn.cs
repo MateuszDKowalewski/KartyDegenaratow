@@ -7,6 +7,6 @@ public class ChcekerSpawn : MonoBehaviour
     public GameObject checkerPrefab;
 
     public void spawn(Transform spawnPoint) {
-        Instantiate(checkerPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(checkerPrefab, new Vector3(spawnPoint.position.x, spawnPoint.position.y, checkerPrefab.transform.position.z), spawnPoint.rotation);
     }
 }

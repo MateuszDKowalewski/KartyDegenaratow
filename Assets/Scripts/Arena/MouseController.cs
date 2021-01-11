@@ -28,7 +28,13 @@ public class MouseController : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
-            if (hit)
+            Debug.Log(hit.collider.gameObject);
+            Debug.Log(hit.collider.gameObject.GetComponent<TileScript>().canPlayerPut());
+            Debug.Log(!hit.collider.gameObject.GetComponent<TileScript>().isTaken());
+            if (hit &&
+                hit.collider.gameObject.transform.parent == map.transform &&
+                hit.collider.gameObject.GetComponent<TileScript>().canPlayerPut() &&
+                !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
             {
                 if(hit.collider.gameObject.transform.parent == map.transform)
                 {
