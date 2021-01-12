@@ -29,6 +29,7 @@ public class MouseController : MonoBehaviour
     {
         this.tryPlaceChecker();
         this.tryMoveChecker();
+        this.tryRemoveChecker();
     }
 
     private void tryPlaceChecker()
@@ -43,10 +44,7 @@ public class MouseController : MonoBehaviour
                 hit.collider.gameObject.GetComponent<TileScript>().canPlayerPut() &&
                 !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
             {
-                if(hit.collider.gameObject.transform.parent == map.transform)
-                {
-                    checkerSpawner.spawn(hit.collider.gameObject.transform, hit.collider.gameObject.GetComponent<TileScript>());
-                }
+                checkerSpawner.spawn(hit.collider.gameObject.transform, hit.collider.gameObject.GetComponent<TileScript>());
             }
         }
     }
@@ -67,8 +65,43 @@ public class MouseController : MonoBehaviour
 
         if(Input.GetMouseButtonUp(0))
         {
+            if(this.selectedChackers != null)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+                if (hit &&
+                    hit.collider.gameObject.transform.parent == map.transform &&
+                    hit.collider.gameObject.GetComponent<TileScript>() != null &&
+                    !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
+                {
+                    CheckerScript cs = this.selectedChackers.GetComponent<CheckerScript>();
+                    if(cs != null)
+                    {
+                        cs.getTileUnder().setTaken(false);
+                        cs.setTileUnder(hit.collider.gameObject.GetComponent<TileScript>());
+                    }
+                    this.selectedChackers.transform.position = new Vector3(
+                        hit.collider.gameObject.transform.position.x,
+                        hit.collider.gameObject.transform.position.y,
+                        this.selectedChackers.transform.position.z);
+                }
+            }
             lineDrawer.reset();
             this.selectedChackers = null;
+        }
+    }
+
+    private void tryRemoveChecker()
+    {
+        if(Input.GetMouseButtonUp(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+            if (hit && hit.collider.gameObject.GetComponent<CheckerScript>() != null)
+            {
+                hit.collider.gameObject.GetComponent<CheckerScript>().getTileUnder().setTaken(false);
+                Destroy(hit.collider.gameObject);
+            }
         }
     }
 

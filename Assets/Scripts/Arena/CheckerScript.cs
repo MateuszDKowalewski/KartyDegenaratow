@@ -17,6 +17,10 @@ public class CheckerScript : MonoBehaviour
         
     }
 
+    public TileScript getTileUnder() {
+        return this.tileUnder;
+    }
+
     public void setTileUnder(TileScript tileUnder) {
         this.tileUnder = tileUnder;
         tileUnder.setTaken(true);
