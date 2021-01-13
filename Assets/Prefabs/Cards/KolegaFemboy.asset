@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: KolegFemboy
+  m_Name: KolegaFemboy
   m_EditorClassIdentifier: Assembly-CSharp::CardPrefabrd
-  name: 
-  description: 
-  skilsDescription: 
-  artwork: {fileID: 0}
-  cost: 0
-  health: 0
-  strength: 0
+  name: Kolega Femboy
+  description: "Ma\u0141y s\u0142odki i uroczy. Brak odporno\u015Bci na wiatr powiewaj\u0105cy
+    sp\xF3dnic\u0105."
+  skilsDescription: "Ma\u0141y s\u0142odki i uroczy. Brak odporno\u015Bci na wiatr
+    powiewaj\u0105cy sp\xF3dnic\u0105."
+  artwork: {fileID: 21300000, guid: c6ba32a926d7ccb40bb3a2b8f0c21070, type: 3}
+  cost: 1
+  health: 1
+  strength: 1
