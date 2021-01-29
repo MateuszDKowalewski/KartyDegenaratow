@@ -20,6 +20,7 @@ public class camerafollow : MonoBehaviour
         transform.position = new Vector3(smoothpos.x, smoothpos.y + ypos, -15f);
     }
 }
+
 /*Bodziix Was Here
   ______________________
  /\                     \
