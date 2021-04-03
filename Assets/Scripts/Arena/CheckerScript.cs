@@ -2,27 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckerScript : MonoBehaviour
+public class CheckerScript : Component
 {
+    private FieldScript _fieldUnder = null;
 
-    private TileScript tileUnder = null;
-
-    void Start()
-    {
-        
+    public FieldScript getTileUnder() {
+        return _fieldUnder;
     }
 
-    void Update()
-    {
-        
-    }
-
-    public TileScript getTileUnder() {
-        return this.tileUnder;
-    }
-
-    public void setTileUnder(TileScript tileUnder) {
-        this.tileUnder = tileUnder;
-        tileUnder.setTaken(true);
+    public void setTileUnder(FieldScript fieldUnder) {
+        _fieldUnder = fieldUnder;
+        // tileUnder.setTaken(true);
     }
 }
