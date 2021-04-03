@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
-    
     public GameObject map;
-
     public ChcekerSpawn checkerSpawner;
-
     public List<Transform> tiles;
-
     public LineDrawer lineDrawer;
     private GameObject selectedChackers = null;
 
@@ -27,9 +23,9 @@ public class MouseController : MonoBehaviour
     
     void Update()
     {
-        this.tryPlaceChecker();
-        this.tryMoveChecker();
-        this.tryRemoveChecker();
+        // tryPlaceChecker();
+        // tryMoveChecker();
+        // tryRemoveChecker();
     }
 
     private void tryPlaceChecker()
@@ -40,11 +36,11 @@ public class MouseController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
             if (hit &&
                 hit.collider.gameObject.transform.parent == map.transform &&
-                hit.collider.gameObject.GetComponent<TileScript>() != null &&
-                hit.collider.gameObject.GetComponent<TileScript>().canPlayerPut() &&
-                !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
+                hit.collider.gameObject.GetComponent<FieldScript>() != null)
+                // hit.collider.gameObject.GetComponent<TileScript>().canPlayerPut() &&
+                // !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
             {
-                checkerSpawner.spawn(hit.collider.gameObject.transform, hit.collider.gameObject.GetComponent<TileScript>());
+                checkerSpawner.spawn(hit.collider.gameObject.transform, hit.collider.gameObject.GetComponent<FieldScript>());
             }
         }
     }
@@ -71,14 +67,14 @@ public class MouseController : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
                 if (hit &&
                     hit.collider.gameObject.transform.parent == map.transform &&
-                    hit.collider.gameObject.GetComponent<TileScript>() != null &&
-                    !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
+                    hit.collider.gameObject.GetComponent<FieldScript>() != null)
+                    // !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
                 {
                     CheckerScript cs = this.selectedChackers.GetComponent<CheckerScript>();
                     if(cs != null)
                     {
-                        cs.getTileUnder().setTaken(false);
-                        cs.setTileUnder(hit.collider.gameObject.GetComponent<TileScript>());
+                        // cs.getTileUnder().setTaken(false);
+                        cs.setTileUnder(hit.collider.gameObject.GetComponent<FieldScript>());
                     }
                     this.selectedChackers.transform.position = new Vector3(
                         hit.collider.gameObject.transform.position.x,
@@ -99,7 +95,7 @@ public class MouseController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
             if (hit && hit.collider.gameObject.GetComponent<CheckerScript>() != null)
             {
-                hit.collider.gameObject.GetComponent<CheckerScript>().getTileUnder().setTaken(false);
+                // hit.collider.gameObject.GetComponent<CheckerScript>().getTileUnder().setTaken(false);
                 Destroy(hit.collider.gameObject);
             }
         }

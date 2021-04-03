@@ -7,7 +7,7 @@ public class ChcekerSpawn : MonoBehaviour
     public GameObject checkerPrefab;
 
     // ReSharper disable Unity.PerformanceAnalysis
-    public void spawn(Transform spawnPoint, TileScript tileUnder)
+    public void spawn(Transform spawnPoint, FieldScript fieldUnder)
     {
         var position = spawnPoint.position;
         GameObject prefabInstance = Instantiate(checkerPrefab, new Vector3(position.x, position.y, checkerPrefab.transform.position.z), spawnPoint.rotation);
@@ -16,7 +16,7 @@ public class ChcekerSpawn : MonoBehaviour
             var myScriptReference = prefabInstance.GetComponent<CheckerScript>();
             if (myScriptReference != null)
             {
-                myScriptReference.setTileUnder(tileUnder);
+                myScriptReference.setTileUnder(fieldUnder);
             }
         }
     }
