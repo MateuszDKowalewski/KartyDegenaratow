@@ -5,7 +5,6 @@ using UnityEngine;
 public class MouseController : MonoBehaviour
 {
     public GameObject map;
-    public ChcekerSpawn checkerSpawner;
     public List<Transform> tiles;
     public LineDrawer lineDrawer;
     private GameObject selectedChackers = null;
@@ -40,7 +39,7 @@ public class MouseController : MonoBehaviour
                 // hit.collider.gameObject.GetComponent<TileScript>().canPlayerPut() &&
                 // !hit.collider.gameObject.GetComponent<TileScript>().isTaken())
             {
-                checkerSpawner.spawn(hit.collider.gameObject.transform, hit.collider.gameObject.GetComponent<FieldScript>());
+                // checkerSpawner.spawn(hit.collider.gameObject.transform, hit.collider.gameObject.GetComponent<FieldScript>());
             }
         }
     }
@@ -74,7 +73,7 @@ public class MouseController : MonoBehaviour
                     if(cs != null)
                     {
                         // cs.getTileUnder().setTaken(false);
-                        cs.setTileUnder(hit.collider.gameObject.GetComponent<FieldScript>());
+                        // cs.setTileUnder(hit.collider.gameObject.GetComponent<FieldScript>());
                     }
                     this.selectedChackers.transform.position = new Vector3(
                         hit.collider.gameObject.transform.position.x,
