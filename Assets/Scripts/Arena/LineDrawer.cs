@@ -21,29 +21,25 @@ public class LineDrawer : MonoBehaviour
         if(draw)
         {
             Vector2 temp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            end = new Vector3(temp.x, temp.y, 6f);
+            end = new Vector3(temp.x, temp.y, -0.5f);
             lineRenderer.SetPosition(0, this.start);
             lineRenderer.SetPosition(1, this.end);
         }
     }
 
-    public void reset()
+    public void stopDraw()
     {
-        this.start = new Vector3(0f, 0f, 6f);
-        this.end = new Vector3(0f, 0f, 6f);
+        start = new Vector3(0f, 0f, -0.5f);
+        end = new Vector3(0f, 0f, -0.5f);
         lineRenderer.SetPosition(0, this.start);
         lineRenderer.SetPosition(1, this.end);
-        this.draw = false;
+        draw = false;
     }
 
-    public void startDraw()
+    public void startDraw(Vector3 position)
     {
-        this.draw = true;
-    }
-
-    public void setStart(Vector3 position)
-    {
-        this.start = position;
-        this.start.z = 6;
+        start = position;
+        start.z = -0.5f;
+        draw = true;
     }
 }
