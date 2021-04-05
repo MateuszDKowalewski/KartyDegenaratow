@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CardDisplay : MonoBehaviour
 {
 
-    public CardPrefabrd cardPrefabrd;
+    // public CardPrefabrd cardPrefabrd;
 
     public Text cardName;
     public Text description;
@@ -19,11 +19,11 @@ public class CardDisplay : MonoBehaviour
 
     void Start()
     {
-        cardName.text = cardPrefabrd.name;
-        description.text = cardPrefabrd.description;
-        artwork.sprite = cardPrefabrd.artwork;
-        health.text = cardPrefabrd.health.ToString();
-        strength.text = cardPrefabrd.strength.ToString();
-        cost.text = cardPrefabrd.cost.ToString();
+        // cardName.text = cardPrefabrd.name;
+        // description.text = cardPrefabrd.description;
+        // artwork.sprite = cardPrefabrd.artwork;
+        // health.text = cardPrefabrd.health.ToString();
+        // strength.text = cardPrefabrd.strength.ToString();
+        // cost.text = cardPrefabrd.cost.ToString();
     }
 }
