@@ -10,7 +10,9 @@ public class BoardController : MonoBehaviour
 
     public LineDrawer arrowDrawer;
     private Vector2Int _movingFrom;
-    private bool moving = false;
+    private bool _moving = false;
+
+    private FieldScript _toEnd;
     
     public Row[] rows;
     private GameObject[,] _chackers = new GameObject[4, 4];
@@ -20,6 +22,21 @@ public class BoardController : MonoBehaviour
         putChecker();
         moveChecker();
         removeChecker();
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Vector2Int? pos = getMouseToBoardPos();
+            if (_chackers != null && pos != null && _chackers[pos.Value.x, pos.Value.y] == null)
+            {
+                _toEnd = getField(pos.Value.x, pos.Value.y).script;
+                _toEnd.StartParticle();
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1) && _toEnd)
+        {
+            _toEnd.EndParticle();
+        }
     }
 
     private void putChecker()
@@ -43,10 +60,10 @@ public class BoardController : MonoBehaviour
         {
             _movingFrom = mousePos.Value;
             arrowDrawer.startDraw(_chackers[mousePos.Value.x, mousePos.Value.y].transform.position);
-            moving = true;
+            _moving = true;
         }
         
-        if (Input.GetKeyUp(KeyCode.Mouse0) && moving)
+        if (Input.GetKeyUp(KeyCode.Mouse0) && _moving)
         {
             arrowDrawer.stopDraw();
             if (mousePos != null && _chackers[mousePos.Value.x, mousePos.Value.y] == null)
@@ -57,7 +74,7 @@ public class BoardController : MonoBehaviour
                 float scale = getField(mousePos.Value.x, mousePos.Value.y).script.scale;
                 current.transform.position = getField(mousePos.Value.x, mousePos.Value.y).transform.position;
                 current.transform.localScale = new Vector3(scale, scale, 1);
-                moving = false;
+                _moving = false;
             }
         }
     }
