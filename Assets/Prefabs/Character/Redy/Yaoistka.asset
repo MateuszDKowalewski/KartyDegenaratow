@@ -21,4 +21,15 @@ MonoBehaviour:
   cost: 5
   health: 3
   strength: 3
-  possibleMoves: []
+  possibleMoves:
+  - {x: -1, y: -3}
+  - {x: -2, y: -3}
+  - {x: 0, y: -3}
+  - {x: 1, y: -3}
+  - {x: 2, y: -3}
+  - {x: -1, y: -2}
+  - {x: -2, y: -2}
+  - {x: 1, y: -2}
+  - {x: 2, y: -2}
+  - {x: 0, y: -2}
+  - {x: 0, y: 1}
