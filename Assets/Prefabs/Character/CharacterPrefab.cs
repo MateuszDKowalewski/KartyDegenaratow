@@ -20,7 +20,7 @@ public class CharacterPrefab : ScriptableObject
     public int strength;
     
     // Movement
-    public Vector2Int possibleMoves;
+    public Vector2Int[] possibleMoves;
 
 
 }
