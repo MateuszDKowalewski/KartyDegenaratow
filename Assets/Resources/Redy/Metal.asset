@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Metal
   m_EditorClassIdentifier: 
+  code: metal
   name: Kolega Metalowiec
   description: "A wi\u0119c chcesz mie\u0107 tak\u0105 styl\xF3w\u0119 jak ja? Musisz
     \u017Cre\u0107 \u017Celazo i chodzi\u0107 na si\u0142k\u0119. CODZIENNIE!"

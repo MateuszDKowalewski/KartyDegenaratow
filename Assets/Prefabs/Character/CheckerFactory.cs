@@ -16,7 +16,7 @@ public class CheckerFactory : MonoBehaviour
             return;
         }
 
-        var prefabs = Resources.LoadAll<CharacterPrefab>("/Assets/Prefabs/Character/Ready");
+        var prefabs = Resources.LoadAll<CharacterPrefab>("Redy");
         _allCharacters = new Dictionary<string, CharacterPrefab>();
         foreach (var prefab in prefabs)
         {
@@ -24,14 +24,18 @@ public class CheckerFactory : MonoBehaviour
         }
     }
 
-    public void instantiateChecker(string name, Vector3 position)
+    public GameObject instantiateChecker(string name, Vector3 position, Vector3 scale)
     {
-        if (_allCharacters.ContainsKey(name))
+        if (!_allCharacters.ContainsKey(name))
         {
-            GameObject checker = Instantiate(CheckerPrefab, position, Quaternion.identity);
-            CheckerScript script = checker.GetComponent(typeof(CheckerScript)) as CheckerScript;
-            script.initailize(_allCharacters[name]);
+            return null;
         }
+        GameObject checker = Instantiate(CheckerPrefab, position, Quaternion.identity);
+        CheckerScript script = checker.GetComponent(typeof(CheckerScript)) as CheckerScript;
+        script.initailize(_allCharacters[name]);
+        checker.transform.SetParent(transform);
+        checker.transform.localScale = scale;
+        return checker;
     }
 
     public List<string> getCheckerNames()

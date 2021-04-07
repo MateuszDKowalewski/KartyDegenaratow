@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Kpoperka
   m_EditorClassIdentifier: 
+  code: kpoperka
   name: "Kole\u017Canka K-poperka"
   description: "Dosta\u0142e\u015B kiedy\u015B fancamem po mordzie?"
   skillDescription: "Atakuje przeciwnika przyt\u0142aczaj\u0105c\u0105 ilo\u015Bci\u0105

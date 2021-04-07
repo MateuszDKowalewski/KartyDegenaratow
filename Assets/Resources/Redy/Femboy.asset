@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Femboy
   m_EditorClassIdentifier: 
+  code: femboy
   name: KolegaFemboy
   description: "Co jest z\u0142ego w ch\u0119ci bycia s\u0142odkim jako m\u0119\u017Cczyzna"
   skillDescription: "Zamienia losow\u0105 jednostk\u0119 przeciwnika w kolege geja"
@@ -21,11 +22,11 @@ MonoBehaviour:
   health: 7
   strength: 6
   possibleMoves:
-  - {x: -1, y: -1}
-  - {x: 0, y: -1}
-  - {x: 1, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: 1}
-  - {x: -1, y: 1}
+  - {x: 1, y: 0}
   - {x: -1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
+  - {x: 1, y: 1}
   - {x: -1, y: -1}
+  - {x: 1, y: -1}
+  - {x: -1, y: 1}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Otaku
   m_EditorClassIdentifier: 
+  code: otaku
   name: Kolega Otaku
   description: Konnichiwa, o genki desu ka?
   skillDescription: "Raz na kilka tur ma atak piecze\u0144ci\u0105, (dmg, lub inne
