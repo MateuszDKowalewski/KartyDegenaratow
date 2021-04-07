@@ -18,7 +18,10 @@ MonoBehaviour:
   skillDescription: "Raz na kilka tur ma atak piecze\u0144ci\u0105, (dmg, lub inne
     zakl\u0119cia)"
   cardArtwork: {fileID: 21300000, guid: f138f0d883b5f144e9d6029265bb4e29, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: 1bd903ab5ecb1b14298592b87b9ae44c, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: 1bd903ab5ecb1b14298592b87b9ae44c,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: 4b270a11c996ff94785b343e025d3954,
+    type: 3}
   cost: 9
   health: 8
   strength: 8

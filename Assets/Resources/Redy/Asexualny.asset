@@ -18,7 +18,10 @@ MonoBehaviour:
     po prostu a-seksualny"
   skillDescription: "Nie reaguje na zmniejszeni obra\u017Ce\u0144"
   cardArtwork: {fileID: 21300000, guid: bded2dfe71b18ef4fa80dd84fe93390d, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: 21ac7006bb2a7d6499a337452e15eb8d, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: 21ac7006bb2a7d6499a337452e15eb8d,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: b0eb56f8f01e27941ab221883456fd27,
+    type: 3}
   cost: 5
   health: 3
   strength: 5

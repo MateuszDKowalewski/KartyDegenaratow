@@ -17,7 +17,10 @@ MonoBehaviour:
   description: "Gdzie mi z tym kurczakiem na talerzu? Wypu\u015B\u0107 go na pole"
   skillDescription: 
   cardArtwork: {fileID: 21300000, guid: 4df8f3f0aa44d074b87046e8783b1886, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: df6c82e742ca67a49a627ab7dd93d49e, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: df6c82e742ca67a49a627ab7dd93d49e,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: 7d106e94079f7f8459ca831ec000e5e4,
+    type: 3}
   cost: 2
   health: 2
   strength: 1

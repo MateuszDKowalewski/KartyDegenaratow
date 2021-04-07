@@ -12,7 +12,7 @@ public class CheckerScript : MonoBehaviour
         _possibleMoves = prefab.possibleMoves;
         SpriteRenderer spriteRenderer = GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
         Debug.Assert(spriteRenderer != null, nameof(spriteRenderer) + " != null");
-        spriteRenderer.sprite = prefab.checkerArtwork;
+        spriteRenderer.sprite = prefab.allayCheckerArtwork;
     }
 
     public Vector2Int[] PossibleMoves => _possibleMoves;

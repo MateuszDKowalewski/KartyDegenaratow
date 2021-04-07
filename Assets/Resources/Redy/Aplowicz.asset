@@ -17,7 +17,10 @@ MonoBehaviour:
   description: "Jab\u0142ko lepsze od banana bo ma szyk i smak"
   skillDescription: "Posiada gigantyczne jab\u0142uko jako mounta"
   cardArtwork: {fileID: 21300000, guid: 7c51887279ca1cd41a7da89e9902ea98, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: d1d3f98e823683a4b9ad2f9f0d560272, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: d1d3f98e823683a4b9ad2f9f0d560272,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: 711282051092e6d4cbebcc95d23c9527,
+    type: 3}
   cost: 4
   health: 3
   strength: 3

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "New character", menuName = "Character")]
 public class CharacterPrefab : ScriptableObject
@@ -14,7 +15,8 @@ public class CharacterPrefab : ScriptableObject
 
     // Graphics
     public Sprite cardArtwork;
-    public Sprite checkerArtwork;
+    public Sprite allayCheckerArtwork;
+    public Sprite enemyCheckerArtwork;
 
     // Stats
     public int cost;

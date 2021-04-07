@@ -18,7 +18,10 @@ MonoBehaviour:
     No wi\u0119c w tych furrsiutach te\u017C co\u015B jest"
   skillDescription: "Po 3 turach transformacja w prawdziwe zwierz\u0119"
   cardArtwork: {fileID: 21300000, guid: 67a7c66a0e1244b4fa1622cc0b128152, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: 69560622e36d7174ab4d4ae3527e2c81, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: 69560622e36d7174ab4d4ae3527e2c81,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: 5b7eaf1c10bf13543b7e4df70dff92c3,
+    type: 3}
   cost: 8
   health: 10
   strength: 2

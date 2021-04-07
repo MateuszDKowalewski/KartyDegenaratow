@@ -19,7 +19,10 @@ MonoBehaviour:
   skillDescription: "Zwi\u0119krzone obra\u017Cenia przeciwko \u017Ce\u0144skim piostaci\u0105.
     Zak\u0141ada na jednostk\u0119 status homocomando kt\xF3rty usuwa j~a po 2 turach "
   cardArtwork: {fileID: 21300000, guid: 9124099842007784ea155a436e09e4a8, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: b73d8af65c77f284e9c0bae8f61986c2, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: b73d8af65c77f284e9c0bae8f61986c2,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: 956c1ca4f61353340a3016b86c4d4728,
+    type: 3}
   cost: 8
   health: 7
   strength: 6

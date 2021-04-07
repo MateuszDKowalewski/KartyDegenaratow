@@ -19,7 +19,10 @@ MonoBehaviour:
     nie odzywa."
   skillDescription: 
   cardArtwork: {fileID: 21300000, guid: 8871a64aa5c4b49418edaf94fbc91a5b, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: 6357d5304f70d8a479166d3c134cda43, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: 6357d5304f70d8a479166d3c134cda43,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: a4ace1d83e7402b45a0c9b4333b3c49f,
+    type: 3}
   cost: 5
   health: 4
   strength: 5

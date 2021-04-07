@@ -18,7 +18,10 @@ MonoBehaviour:
   skillDescription: "Im wi\u0119cej gej\xF3w na planszy tym bardziej zwi\u0119krzaj\u0105
     si\u0119 statyki"
   cardArtwork: {fileID: 21300000, guid: 6ca777de453baea4bb51a42200b8ccad, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: ba053effb85970d47910b487bd3cadd3, type: 3}
+  allayCheckerArtwork: {fileID: 21300000, guid: ba053effb85970d47910b487bd3cadd3,
+    type: 3}
+  enemyCheckerArtwork: {fileID: 21300000, guid: 90a9e5487dd9e1d4ba6de395648cbcd1,
+    type: 3}
   cost: 5
   health: 3
   strength: 3
