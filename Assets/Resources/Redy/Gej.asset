@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Gej
   m_EditorClassIdentifier: 
+  code: gej
   name: Kolega Gej
   description: "Nale\u017C\u0119 do pewnej tajnej organizacji lgbt, kt\xF3rej g\u0142\xF3wnym
     zadaniem jest niszczeniie polskich rodzin"

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Yaoistka
   m_EditorClassIdentifier: 
+  code: yaoistka
   name: "Kole\u017Canka Yaoistka"
   description: "Obczajcie m\xF3j profil na wattpadzie"
   skillDescription: "Im wi\u0119cej gej\xF3w na planszy tym bardziej zwi\u0119krzaj\u0105

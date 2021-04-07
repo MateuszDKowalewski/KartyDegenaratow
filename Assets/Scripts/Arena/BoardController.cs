@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using JetBrains.Annotations;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class BoardController : MonoBehaviour
 {
-    public GameObject checkerPrefab;
+    public CheckerFactory checkerFactory;
 
     public LineDrawer arrowDrawer;
     private Vector2Int _movingFrom;
-    private bool _moving = false;
+    private bool _moving;
 
     private FieldScript _toEnd;
     
@@ -20,6 +22,7 @@ public class BoardController : MonoBehaviour
     private void Update()
     {
         putChecker();
+        showPossibleMoves();
         moveChecker();
         removeChecker();
 
@@ -41,14 +44,73 @@ public class BoardController : MonoBehaviour
 
     private void putChecker()
     {
-        if (Input.GetKeyUp(KeyCode.Q))
+        var input = Input.inputString;
+        Vector2Int? mousePos = getMouseToBoardPos();
+        if (mousePos == null || _chackers[mousePos.Value.x, mousePos.Value.y] != null)
         {
-            Vector2Int? pos = getMouseToBoardPos();
-            if (_chackers != null && pos != null && _chackers[pos.Value.x, pos.Value.y] == null)
+            return;
+        }
+        Vector3 pos = getField(mousePos.Value.x, mousePos.Value.y).transform.position;
+        float scale = getField(mousePos.Value.x, mousePos.Value.y).script.scale;
+        Vector3 scaleVector = new Vector3(scale, scale, 1); 
+        switch(input){
+            case "1":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("aplowicz", pos, scaleVector);
+                break;
+            case "2":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("asexualny", pos, scaleVector);
+                break;
+            case "3":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("bisexualny", pos, scaleVector);
+                break;
+            case "4":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("femboy", pos, scaleVector);
+                break;
+            case "5":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("furry", pos, scaleVector);
+                break;
+            case "6":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("niebinarny", pos, scaleVector);
+                break;
+            case "7":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("omnisexualna", pos, scaleVector);
+                break;
+            case "8":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("otaku", pos, scaleVector);
+                break;
+            case "9":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("wege", pos, scaleVector);
+                break;
+            case "0":
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("yaoistka", pos, scaleVector);
+                break;
+        }
+        
+    }
+
+    private void showPossibleMoves()
+    {
+        Vector2Int? mousePos = getMouseToBoardPos();
+        if (mousePos == null || _chackers[mousePos.Value.x, mousePos.Value.y] == null)
+        {
+            if (!_moving)
             {
-                float scale = getField(pos.Value.x, pos.Value.y).script.scale;
-                _chackers[pos.Value.x, pos.Value.y] = Instantiate(checkerPrefab, getField(pos.Value.x, pos.Value.y).transform.position, Quaternion.identity);
-                _chackers[pos.Value.x, pos.Value.y].transform.localScale = new Vector3(scale, scale, 1);
+                hideAllParticle();
+            }
+            return;
+        }
+        CheckerScript checkerScript = _chackers[mousePos.Value.x, mousePos.Value.y].GetComponent(typeof(CheckerScript)) as CheckerScript;
+        if (checkerScript is null || _moving)
+        {
+            return;
+        }
+        Vector2Int[] possibleMoves = checkerScript.PossibleMoves;
+        foreach (var move in possibleMoves)
+        {
+            Vector2Int targetPos = mousePos.Value + move;
+            if (targetPos.x >= 0 && targetPos.x < 4 && targetPos.y >= 0 && targetPos.y < 4 && !_chackers[targetPos.x, targetPos.y])
+            {
+                getField(targetPos.x, targetPos.y).script.StartParticle();
             }
         }
     }
@@ -62,11 +124,12 @@ public class BoardController : MonoBehaviour
             arrowDrawer.startDraw(_chackers[mousePos.Value.x, mousePos.Value.y].transform.position);
             _moving = true;
         }
-        
         if (Input.GetKeyUp(KeyCode.Mouse0) && _moving)
         {
+            hideAllParticle();
             arrowDrawer.stopDraw();
-            if (mousePos != null && _chackers[mousePos.Value.x, mousePos.Value.y] == null)
+            _moving = false;
+            if (mousePos != null && _chackers[mousePos.Value.x, mousePos.Value.y] == null && isMoveAvaiable(_movingFrom, mousePos.Value))
             {
                 GameObject current = _chackers[_movingFrom.x, _movingFrom.y];
                 _chackers[_movingFrom.x, _movingFrom.y] = null;
@@ -74,14 +137,13 @@ public class BoardController : MonoBehaviour
                 float scale = getField(mousePos.Value.x, mousePos.Value.y).script.scale;
                 current.transform.position = getField(mousePos.Value.x, mousePos.Value.y).transform.position;
                 current.transform.localScale = new Vector3(scale, scale, 1);
-                _moving = false;
             }
         }
     }
 
     private void removeChecker()
     {
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.Q))
         {
             Vector2Int? pos = getMouseToBoardPos();
             if (_chackers != null && pos != null && _chackers[pos.Value.x, pos.Value.y] != null)
@@ -112,9 +174,39 @@ public class BoardController : MonoBehaviour
         return null;
     }
 
+    private void hideAllParticle()
+    {
+        for (int y = 0; y < 4; y++)
+        {
+            for (int x = 0; x < 4; x++)
+            {
+                getField(x, y).script.EndParticle();
+            }
+        }
+    }
+
     private Field getField(int x, int y)
     {
         return rows[y].fields[x];
+    }
+
+    private bool isMoveAvaiable(Vector2Int from, Vector2Int to)
+    {
+        Vector2Int move = to - from;
+        CheckerScript script = _chackers[from.x, from.y].GetComponent(typeof(CheckerScript)) as CheckerScript;
+        if (!script)
+        {
+            return false;
+        }
+
+        foreach (var possibleMove in script.PossibleMoves)
+        {
+            if (possibleMove.Equals(move))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
 

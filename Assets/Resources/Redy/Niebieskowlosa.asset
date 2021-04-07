@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Niebieskowlosa
   m_EditorClassIdentifier: 
+  code: niebieskowlosa
   name: "Kole\u017Canka z niebieskimi w\u0142osami"
   description: "- kto\u015B mi kiedy\u015B powiedzia\u0142, \u017Ce mam wi\u0119cej
     kolczyk\xF3w ni\u017C praw - i co dalej?  - od tamtego dnia ju\u017C si\u0119

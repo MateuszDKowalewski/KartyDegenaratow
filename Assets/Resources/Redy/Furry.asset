@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
   m_Name: Furry
   m_EditorClassIdentifier: 
+  code: furry
   name: Kolega Furry
   description: "Wg\u0142\u0119bia\u0142e\u015B si\u0119 kiedy\u015B w lore fnaf?
     No wi\u0119c w tych furrsiutach te\u017C co\u015B jest"

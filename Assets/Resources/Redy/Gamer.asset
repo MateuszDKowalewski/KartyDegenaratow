@@ -10,19 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
-  m_Name: Niebinarny
+  m_Name: Gamer
   m_EditorClassIdentifier: 
-  name: Kolega Niebinarny
-  description: "Dzisiaj identyfikuj\u0119 si\u0119 jako \u015Bmig\u0142owiec wojskowy
-    CH47"
-  skillDescription: "Po 1 turze ma dost\u0119pne transformacje"
-  cardArtwork: {fileID: 21300000, guid: af634b7ba43b465439273c10336b0339, type: 3}
-  checkerArtwork: {fileID: 21300000, guid: 44d892b70b81bf54f879359f4653fa27, type: 3}
+  code: gamer
+  name: Kolega Gamer
+  description: "Mamo tej gry nie da si\u0119 zapa\u0142zowa\u0107"
+  skillDescription: Fuzja z Redditorem
+  cardArtwork: {fileID: 21300000, guid: 5f1efb2394f03b244a4049983915f9f9, type: 3}
+  checkerArtwork: {fileID: 21300000, guid: 0c096919a96444d4ba75de5c819612a0, type: 3}
   cost: 5
-  health: 2
-  strength: 1
+  health: 4
+  strength: 4
   possibleMoves:
-  - {x: 1, y: 0}
-  - {x: -1, y: 0}
   - {x: 0, y: 1}
+  - {x: 0, y: 2}
+  - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  - {x: -1, y: 0}
+  - {x: -2, y: 0}
   - {x: 0, y: -1}
+  - {x: 0, y: -2}
