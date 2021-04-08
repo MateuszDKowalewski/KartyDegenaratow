@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
+  m_Name: Kpoperka
+  m_EditorClassIdentifier: 
+  code: kpoperka
+  name: "Kole\u017Canka K-poperka"
+  description: "Dosta\u0142e\u015B kiedy\u015B fancamem po mordzie?"
+  skillDescription: "Atakuje przeciwnika przyt\u0142aczaj\u0105c\u0105 ilo\u015Bci\u0105
+    fancam\xF3w, wyciszenie na jedn\u0105 tur\u0119"
+  cardArtwork: {fileID: 21300000, guid: b93d930a0f85b004db9ef735d734d7e4, type: 3}
+  checkerArtwork: {fileID: 21300000, guid: fc2f3bc862e6c51499fa9fd61c6da196, type: 3}
+  cost: 8
+  health: 6
+  strength: 6
+  possibleMoves:
+  - {x: -2, y: -1}
+  - {x: -1, y: -2}
+  - {x: 1, y: -2}
+  - {x: 2, y: -1}
+  - {x: 2, y: 1}
+  - {x: 1, y: 2}
+  - {x: -1, y: 2}
+  - {x: -2, y: 1}

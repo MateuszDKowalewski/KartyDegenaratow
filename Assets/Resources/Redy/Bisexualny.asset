@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
+  m_Name: Bisexualny
+  m_EditorClassIdentifier: 
+  code: bisexualny
+  name: Kolega Bisexualny
+  description: "Ty mnie pytasz, czy wol\u0119 kaw\u0119 czy herbat\u0119? stary,
+    ja p\u0142acz\u0119 po nocach bo nie umiem si\u0119 zdecydowa\u0107 na k\xF3rym
+    boku ani z kim \u015Bpi\u0119, a ty chcesz \u017Cebym ci w minut\u0119 powiedzia\u0142
+    czego chce si\u0119 napi\u0107?"
+  skillDescription: 
+  cardArtwork: {fileID: 21300000, guid: e1be094e3b18d9d4f9f0f4667344a85a, type: 3}
+  checkerArtwork: {fileID: 21300000, guid: 165a3f091aa1fbe4ea6258db38ed6c29, type: 3}
+  cost: 5
+  health: 4
+  strength: 4
+  possibleMoves:
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
+  - {x: 2, y: 0}
+  - {x: -2, y: 0}

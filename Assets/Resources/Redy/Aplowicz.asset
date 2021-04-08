@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
+  m_Name: Aplowicz
+  m_EditorClassIdentifier: 
+  code: aplowicz
+  name: Lord Applowicz
+  description: "Jab\u0142ko lepsze od banana bo ma szyk i smak"
+  skillDescription: "Posiada gigantyczne jab\u0142uko jako mounta"
+  cardArtwork: {fileID: 21300000, guid: 7c51887279ca1cd41a7da89e9902ea98, type: 3}
+  checkerArtwork: {fileID: 21300000, guid: d1d3f98e823683a4b9ad2f9f0d560272, type: 3}
+  cost: 4
+  health: 3
+  strength: 3
+  possibleMoves:
+  - {x: -1, y: -1}
+  - {x: 0, y: -1}
+  - {x: 1, y: -1}
+  - {x: 0, y: 1}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
+  m_Name: Furry
+  m_EditorClassIdentifier: 
+  code: furry
+  name: Kolega Furry
+  description: "Wg\u0142\u0119bia\u0142e\u015B si\u0119 kiedy\u015B w lore fnaf?
+    No wi\u0119c w tych furrsiutach te\u017C co\u015B jest"
+  skillDescription: "Po 3 turach transformacja w prawdziwe zwierz\u0119"
+  cardArtwork: {fileID: 21300000, guid: 67a7c66a0e1244b4fa1622cc0b128152, type: 3}
+  checkerArtwork: {fileID: 21300000, guid: 69560622e36d7174ab4d4ae3527e2c81, type: 3}
+  cost: 8
+  health: 10
+  strength: 2
+  possibleMoves:
+  - {x: -2, y: -2}
+  - {x: 0, y: -2}
+  - {x: 2, y: -2}
+  - {x: 1, y: 1}
+  - {x: -1, y: 1}
