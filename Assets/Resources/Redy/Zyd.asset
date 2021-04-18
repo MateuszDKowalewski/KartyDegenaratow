@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e01894b2eb56342a7a47dbb7dc5bc2, type: 3}
+  m_Name: Zyd
+  m_EditorClassIdentifier: 
+  code: zyd
+  name: "\u017Byd"
+  description: Lorem ipsum
+  skillDescription: Kontroluje wszystko i wszystkich
+  cardArtwork: {fileID: 21300000, guid: fea2c7dd00dc14a4ea973f88ba9c3a36, type: 3}
+  allayCheckerArtwork: {fileID: 0}
+  enemyCheckerArtwork: {fileID: 0}
+  cost: 8
+  health: 3
+  strength: 3
+  possibleMoves: []

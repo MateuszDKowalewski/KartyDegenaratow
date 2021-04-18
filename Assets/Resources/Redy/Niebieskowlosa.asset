@@ -18,7 +18,7 @@ MonoBehaviour:
     kolczyk\xF3w ni\u017C praw - i co dalej?  - od tamtego dnia ju\u017C si\u0119
     nie odzywa."
   skillDescription: 
-  cardArtwork: {fileID: 21300000, guid: 8871a64aa5c4b49418edaf94fbc91a5b, type: 3}
+  cardArtwork: {fileID: 21300000, guid: e0ade1eb44e42b740842ccec80c37b53, type: 3}
   allayCheckerArtwork: {fileID: 21300000, guid: 6357d5304f70d8a479166d3c134cda43,
     type: 3}
   enemyCheckerArtwork: {fileID: 21300000, guid: a4ace1d83e7402b45a0c9b4333b3c49f,
