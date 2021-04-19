@@ -16,11 +16,8 @@ public class HandScript : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            List<string> result = cardFactory.getCardsNames();
-            foreach (string r in result)
-            {
-                Debug.Log(r);
-            }
+            string randomCard = cardFactory.getCardsNames()[0];
+            cardFactory.instantiateCard(randomCard, transform, transform.position);
         }
     }
 }

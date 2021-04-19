@@ -6,7 +6,6 @@ public class CardFactory : MonoBehaviour
 {
     
     public GameObject cardPrefab;
-    
     private static Dictionary<string, CharacterPrefab> _allCharacters;
     private static bool _isInitialized = _allCharacters != null;
     
@@ -16,7 +15,6 @@ public class CardFactory : MonoBehaviour
         {
             return;
         }
-
         var prefabs = Resources.LoadAll<CharacterPrefab>("Redy");
         _allCharacters = new Dictionary<string, CharacterPrefab>();
         foreach (var prefab in prefabs)
@@ -25,15 +23,19 @@ public class CardFactory : MonoBehaviour
         }
     }
 
-    public GameObject instantiateCard(string name, GameObject parent, Vector3 position)
+    public GameObject instantiateCard(string name, Transform parent, Vector3 position)
     {
         if (!_allCharacters.ContainsKey(name))
         {
             return null;
         }
         GameObject card = Instantiate(cardPrefab, position, Quaternion.identity);
+        CardScript script = card.GetComponent(typeof(CardScript)) as CardScript;
+        script.Init(_allCharacters[name]);
         card.transform.SetParent(transform);
-        card.transform.parent = parent.transform;
+        card.transform.localPosition = position;
+        card.transform.parent = parent;
+        card.transform.localScale = new Vector3(script.baseScale, script.baseScale, 1f);
         return card;
     }
 

@@ -16,17 +16,23 @@ public class CardScript : MonoBehaviour
     public Text attack;
     public Text cost;
 
-    public double baseScale = 0.18;
-    public double previewScale = 0.25;
+    public float baseScale = 0.18f;
+    public float previewScale = 0.25f;
+
+    public void Init(CharacterPrefab characterPrefab)
+    {
+        prefab = characterPrefab;
+        artwork.sprite = characterPrefab.cardArtwork;
+        name.text = characterPrefab.name;
+        description.text = characterPrefab.skillDescription;
+        health.text = characterPrefab.health.ToString();
+        attack.text = characterPrefab.strength.ToString();
+        cost.text = characterPrefab.cost.ToString();
+    }
     
     void Start()
     {
-        artwork.sprite = prefab.cardArtwork;
-        name.text = prefab.name;
-        description.text = prefab.skillDescription;
-        health.text = prefab.health.ToString();
-        attack.text = prefab.strength.ToString();
-        cost.text = prefab.cost.ToString();
+        
     }
 
     void Update()
