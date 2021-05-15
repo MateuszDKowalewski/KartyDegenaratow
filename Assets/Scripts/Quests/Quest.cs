@@ -11,8 +11,6 @@ public class Quest : MonoBehaviour
 
     public string title;
     public string description;
-    public int expReward;
-    public int goldReward;
 
     public PlayerStats statstyki;
     public QuestGoal goal;
@@ -21,16 +19,18 @@ public class Quest : MonoBehaviour
     public Text titleText;
     public Text descriptionText;
 
-    public void OnCollisionEnter2D(Collision2D col)
+
+    public virtual void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log(col.collider.name);
 
         if (isActive == false)
-        {
+         {
             questwindow.SetActive(true);
             titleText.text = title;
             descriptionText.text = description;
-        }
+         }
+
     }
 
     public void AcceptQuest()

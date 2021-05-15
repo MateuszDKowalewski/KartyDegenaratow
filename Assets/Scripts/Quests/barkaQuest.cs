@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class barkaQuest : Quest
 {
-    public Quest Quest;
+    //public Quest Quest;
 
-    public void papajQuestAktywacja(Collision2D col)
+    public override void OnCollisionEnter2D(Collision2D col)
     {
-        if (Quest.isActive == true)
+        if (isActive == true)
         {
             Debug.Log("OOOOOOOOOO PAAAANIEEEE, TO TY NA MNIE SPOOOOOOJRZAAAŁEEEŚ");
             Debug.Log("Brawo, zaśpiewałeś barkę z papieżem");
-            Quest.isActive = false;
+            questwindow.SetActive(false);
+        }
+        else if (isActive == false)
+        {
+            questwindow.SetActive(true);
+            titleText.text = title;
+            descriptionText.text = description;
         }
     }
 }
