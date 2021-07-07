@@ -55,34 +55,34 @@ public class BoardController : MonoBehaviour
         Vector3 scaleVector = new Vector3(scale, scale, 1); 
         switch(input){
             case "1":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("aplowicz", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("gamer", pos, scaleVector);
                 break;
             case "2":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("asexualny", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("gargamel", pos, scaleVector);
                 break;
             case "3":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("bisexualny", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("janusz", pos, scaleVector);
                 break;
             case "4":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("femboy", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("kibol", pos, scaleVector);
                 break;
             case "5":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("furry", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("mocher", pos, scaleVector);
                 break;
             case "6":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("niebinarny", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("niebieskowlosa", pos, scaleVector);
                 break;
             case "7":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("omnisexualna", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("patostreamer", pos, scaleVector);
                 break;
             case "8":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("otaku", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("psycholoszka", pos, scaleVector);
                 break;
             case "9":
                 _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("wege", pos, scaleVector);
                 break;
             case "0":
-                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("yaoistka", pos, scaleVector);
+                _chackers[mousePos.Value.x, mousePos.Value.y] = checkerFactory.instantiateChecker("zyd", pos, scaleVector);
                 break;
         }
         

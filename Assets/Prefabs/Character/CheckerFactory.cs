@@ -20,6 +20,7 @@ public class CheckerFactory : MonoBehaviour
         _allCharacters = new Dictionary<string, CharacterPrefab>();
         foreach (var prefab in prefabs)
         {
+            Debug.Log(prefab.code);
             _allCharacters.Add(prefab.code, prefab);
         }
     }
