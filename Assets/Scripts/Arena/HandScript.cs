@@ -30,7 +30,8 @@ public class HandScript : MonoBehaviour
         foreach(GameObject card in cards)
         {
             Vector2 temp = new Vector2(-200f + 50 * n++ ,card.transform.position.y);
-            card.transform.position = temp;
+            RectTransform rt = card.GetComponent<RectTransform>();
+            rt.localPosition = temp;
         }
     }
 }
