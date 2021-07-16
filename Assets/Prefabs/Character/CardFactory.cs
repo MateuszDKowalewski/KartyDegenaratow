@@ -27,6 +27,7 @@ public class CardFactory : MonoBehaviour
     {
         if (!_allCharacters.ContainsKey(name))
         {
+            // TODO: throw exception
             return null;
         }
         GameObject card = Instantiate(cardPrefab, position, Quaternion.identity);

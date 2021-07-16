@@ -15,7 +15,7 @@ public class DeckManagment : MonoBehaviour
             int amount = Random.Range(1, 4);
             for (int i = 0; i < amount; i++)
             {
-                deck.Add(characterPrefab.name);
+                deck.Add(characterPrefab.code);
             }
         }
         deck = tasowanie(deck);
